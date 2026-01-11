@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background-color: rgb(228, 221, 236); */
+             background-color: rgb(117, 150, 151);
+            
+        }
+        
+        #container{
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid black;
+            margin: 12px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            /* background-color: rgb(156, 154, 158); */
+            /* background-color: rgb(226, 215, 215); */
+             background-color: rgb(63, 120, 122);
+            
+        }
+        
+        input{
+           width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            font-size: 16px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            
+        }
+        #type{
+            margin: 5px;
+            padding: 5px;
+            
+        }
+       button{
+           
+            /* display: block;
+             margin: 20px auto;
+            text-align: center;
+            border-radius: 20%;
+            padding:5%; */
+
+
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom:20px ;
+            background-color: rgb(124, 124, 223);
+        }
+       @media (max-width: 480px){
+                h1{
+                    font-size: 22px;
+             }
+                #container{
+                    padding: 16px;
+                }
+            }
+
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Sign up</h1>
+        <form>
+            
+
+            <label for="name">Full Name</label>
+            <br>
+            <input type="text" name="name" id="name" placeholder="Full Name" required>
+            <br><br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email" placeholder="Email"    required>
+            <br><br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" maxlength="10" minlength="10" name="password" id="password" placeholder="Password" required >
+            
+
+            <br><br>
+           
+            <label for="messName">Mess Name</label>
+            <br>
+            <input type="text" name="messName" id="messName" placeholder="Mess Name" required>
+            <br><br>
+            <label for="messAddress">Mess Address</label>
+            <br>
+            <input type="text" name="messAddress" id="messAddress" placeholder="Mess Address" required>
+
+            <br>
+                 <button type="submit">Register</button>
+        </form>
+        
+    </div>
+<script>
+    // function changeForm(){
+    //     let type =document.getElementById("type").value;
+    //     let onerfield =document.getElementById("onerfield");
+    //     if(type === "owner"){
+    //         onerfield.style.display = "block";
+    //     }
+    //     else{
+    //         onerfield.style.display = "none";
+    //     }
+    // }
+    
+</script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMess | Sign Up</title>
+</head>
+
+<body>
+
+<div>
+    <h1>Sign Up</h1>
+
+    <form>
+        
+        <label>User Type</label><br>
+        <select id="type" onchange="changeForm()">
+            <option value="">Select User Type</option>
+            <option value="owner">Owner</option>
+            <option value="student">Student</option>
+        </select>
+
+        <br><br>
+
+       
+        <input type="text" placeholder="Full Name" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <input type="password" placeholder="Password" required><br><br>
+
+        
+        <div id="ownerFields" style="display:none;">
+            <input type="text" placeholder="Mess Name"><br><br>
+            <input type="text" placeholder="Mess Address"><br><br>
+        </div>
+
+        <button type="submit">Create Account</button>
+    </form>
+</div>
+
+<script>
+function changeForm() {
+    let type = document.getElementById("type").value;
+    let ownerFields = document.getElementById("ownerFields");
+
+    if (type === "owner") {
+        ownerFields.style.display = "block";
+    } else {
+        ownerFields.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html> -->
