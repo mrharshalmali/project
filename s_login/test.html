@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(200, 194, 205);
+        }
+
+        #container {
+            height: 300px;
+            width: 420px;
+            border: 1px solid black;
+            margin: 12px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+
+
+
+        }
+
+        #row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #harsh {
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+
+        #harsh1 {
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+
+        #harsh2 {
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+
+        #label {
+            justify-content: left;
+            align-self: flex-start;
+        }
+
+        button {
+            /* background-color: blueviolet; */
+            background-color: rgb(200, 194, 205);
+            color:black;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <form action="/server" onsubmit="return validation()">
+        <div id="container">
+            <h1>Login</h1>
+
+            <div id="row">
+                <label for="harsh">Username</label>
+                <input type="text" placeholder="username" id="harsh" name="user" required>
+            </div>
+
+            <br>
+
+
+            <div id="row">
+                <label for="harsh1">Password</label>
+                <input type="password" placeholder="password" id="harsh1" name="pass" required>
+            </div>
+
+            <br>
+
+            <div id="row">
+                <label for="harsh2">Mobile No</label>
+                <input type="number" maxlength="10" placeholder="mobile no" id="harsh2" name="mobile" required>
+            </div>
+
+            <br>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <script>
+        function validation() {
+            let user = document.querySelector("#harsh");
+            let pass = document.querySelector("#harsh1");
+            let mobile = document.querySelector("#harsh2");
+            if (user.value === "") {
+
+                // user.placeholder = "enter username";
+                user.classList.add("error");
+                user.focus();
+                return false;
+            }
+            user.classList.remove("error");
+
+            if (pass.value === "") {
+                // pass.placeholder = "enter password";
+                pass.classList.add("error");
+                pass.focus();
+                return false;
+            }
+            // pass.classList.remove("error");
+
+            if (mobile.value.length !== 10 || mobile.value === "" || isNaN(mobile.value)) {
+                // mobile.placeholder = "enter mobile 10 degit mobile number";
+                alert("enter mobile 10 degit mobile number");
+                mobile.classList.add("error");
+                mobile.focus();
+                return false;
+            }
+            mobile.classList.remove("error");
+            return true;
+
+        }
+
+    </script>
+</body>
+
+</html>
